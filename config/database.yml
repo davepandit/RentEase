@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: airbnb_development
+  username: <%= ENV['DB_USERNAME'] %> 
+  password: <%= ENV['DB_PASSWORD'] %>  # Replace with your PostgreSQL password
+  host: localhost          # Ensure the host is localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
